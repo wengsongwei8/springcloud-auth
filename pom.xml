@@ -97,7 +97,7 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <appendAssemblyId>false</appendAssemblyId>
-                    <finalName>user-center</finalName><!--打包文件名称-->
+                    <finalName>auth-center</finalName><!--打包文件名称-->
                     <descriptors>
                         <descriptor>deploy/assemble/assemble.xml</descriptor>
                     </descriptors>
