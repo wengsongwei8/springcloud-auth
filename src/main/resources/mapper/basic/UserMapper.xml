@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weng.auth.login.mapper.UserMapper">
+
+    <!-- 通用查询映射结果  配置了autoMapping=true,其他的无需配置，将会自动映射-->
+    <resultMap id="BaseResultMap" type="com.weng.auth.login.entity.User" autoMapping="true"/>
+
+
+    <select id="findByUserName" resultMap="BaseResultMap" parameterType="string">
+		select *
+		from u_user t where t.is_del = 0 and t.account = #{account} limit 1
+	</select>
+
+    <update id="changePwd" parameterType="java.util.HashMap">
+        UPDATE u_user SET password = '${password}' WHERE id = '${id}'
+    </update>
+
+</mapper>
