@@ -86,6 +86,7 @@
                         <exclude>application.yml</exclude>
                         <exclude>application-dev.yml</exclude>
                         <exclude>logback-spring.xml</exclude>
+                        <exclude>redis-config.properties</exclude>
                     </excludes>
                 </configuration>
             </plugin>
