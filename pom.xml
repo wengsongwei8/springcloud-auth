@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.weng.framework</groupId>
         <artifactId>cloud-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <groupId>com.weng.hyh</groupId>
@@ -84,7 +84,8 @@
                 <configuration>
                     <excludes>
                         <exclude>application.yml</exclude>
-                        <exclude>application-dev.yml</exclude>
+                        <exclude>application-active.yml</exclude>
+                        <exclude>application-common.yml</exclude>
                         <exclude>logback-spring.xml</exclude>
                         <exclude>redis-config.properties</exclude>
                     </excludes>
@@ -98,7 +99,7 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <appendAssemblyId>false</appendAssemblyId>
-                    <finalName>auth-center</finalName><!--打包文件名称-->
+                    <finalName>auth</finalName><!--打包文件名称-->
                     <descriptors>
                         <descriptor>deploy/assemble/assemble.xml</descriptor>
                     </descriptors>
@@ -125,24 +126,6 @@
         </resources>
     </build>
 
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <env>dev</env>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>prop</id>
-            <properties>
-                <env>prop</env>
-            </properties>
-        </profile>
-    </profiles>
     <repositories>
         <repository>
             <id>my-maven-repo</id>
@@ -150,3 +133,4 @@
         </repository>
     </repositories>
 </project>
+
