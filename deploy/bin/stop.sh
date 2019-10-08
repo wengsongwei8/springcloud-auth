@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # bootstrap class
-MAIN_CLASS=com.weng.auth.AuthController
+MAIN_CLASS=com.weng.auth.AuthApplication
 
 # basename of the logfile.
 LOG_BASE_NAME=demonstrate
